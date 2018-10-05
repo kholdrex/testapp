@@ -1,0 +1,32 @@
+@import "colors";
+@import "libs/monthly";
+@import "libs/palette-color-picker";
+@import "jquery-datetimepicker/jquery.datetimepicker";
+@import "bootstrap";
+
+body {
+    background-color: $background;
+}
+
+#calendar {
+    width: 100%;
+    display: inline-block;
+}
+
+.buttons-group {
+  padding: 10px;
+}
+
+.picker {
+  width: 90%;
+  float: left;
+}
+
+.palette-color-picker-button {
+  height: 30px;
+  margin-top: 4px;
+}
+
+.m-right {
+  margin-right: 5px;
+}

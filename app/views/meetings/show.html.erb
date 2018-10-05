@@ -1,0 +1,54 @@
+<div class="container">
+  <%= hidden_field_tag :meeting_id, @meeting.id, id: 'meeting-id'%>
+  <div class="row">
+    <div class="col-9 m-auto">
+      <table class="table table-borderless">
+        <tbody>
+        <tr>
+          <th scope="row">Title:</th>
+          <td><%= @meeting.title %></td>
+        </tr>
+        <tr>
+          <th scope="row">Organizer Email:</th>
+          <td><%= mail_to @meeting.organizer_email %></td>
+        </tr>
+        <tr>
+          <th scope="row">Start Time:</th>
+          <td><%= @meeting.start_time.strftime('%Y-%m-%d %H:%M') %></td>
+        </tr>
+        <tr>
+          <th scope="row">End Time:</th>
+          <td><%= @meeting.end_time.strftime('%Y-%m-%d %H:%M') %></td>
+        </tr>
+        <tr>
+          <th scope="row">Highlights:</th>
+          <td>
+            <table class="table table-borderless">
+              <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Start Time</th>
+                <th scope="col">End Time</th>
+                <th scope="col">Highlight Text</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @meeting.highlights.each do |h| %>
+                <tr>
+                  <th scope="row">1</th>
+                  <td><%= h.start_time.strftime('%Y-%m-%d %H:%M') %></td>
+                  <td><%= h.end_time.strftime('%Y-%m-%d %H:%M') %></td>
+                  <td><%= h.highlight_text %></td>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>
+            <button type="button" class="btn btn-outline-primary" id="add-event-highlight">Add Highlight</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

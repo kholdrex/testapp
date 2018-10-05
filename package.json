@@ -1,0 +1,10 @@
+{
+  "name": "test-app",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-datetimepicker": "^2.5.20",
+    "moment": "^2.22.2",
+    "sweetalert2": "^7.28.4"
+  }
+}
